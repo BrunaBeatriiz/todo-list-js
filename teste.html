@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="texto">
+    <button id="btsalvar" onclick="salvar()">Salvar</button>
+    <button id="btsalvar" onclick="exibir()">Exibir</button>
+    <input type="checkbox" name="" id="">
+</body>
+<script>
+    const nome = document.getElementById("texto");
+    let elementos = [];
+
+    //JSON.stringify(elementos) transforma o array em string para salvar no localStorage.
+
+    // JSON.parse() transforma a string de volta em array quando você quiser usá-la.
+
+    // Assim, toda vez que salvar, o nome é adicionado ao array e persistido no localStorage.
+
+
+    const salvar = () => {
+        elementos.push(nome.value);
+        localStorage.setItem("listaNomes",JSON.stringify(elementos));
+        alert("Nome salvo");
+    }
+
+    function exibir () {
+        const mostarNome = JSON.parse(localStorage.getItem("listaNomes"));
+        console.log(mostarNome);
+    }
+</script>
+</html>
+
+
+
