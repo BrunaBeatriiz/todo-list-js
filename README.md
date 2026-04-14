@@ -41,4 +41,3 @@ https://brunabeatriiz.github.io/todo-list-js/
 ---
 
 ## 📸 Preview
-(Adicione aqui uma imagem ou GIF do projeto)
