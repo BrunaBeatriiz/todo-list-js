@@ -20,6 +20,7 @@ main{
     width: 90%;
     max-width: 480px;
     padding: 20px;
+    border: 1px solid #f1f5f9;
     border-radius: 16px;
     box-shadow: 0px 8px 20px rgba(0,0,0,0.05);
 }
@@ -65,11 +66,16 @@ section#primeira>button{
    color: white;
    font-weight: 500;
    cursor: pointer;
-   transition: 0.2s;
+   transition:all 0.2s ease;
 }
 
 section#primeira>button:hover{
+     transform: translateY(-1px);
+   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
    background-color: #be185d;
+}
+section#primeira>button:active{
+  transform: scale(0.97);
 }
 
 
@@ -103,14 +109,16 @@ section#resultado >ul > li{
     justify-content: space-between;
     align-items: center;
     border: 1px solid #e5e7eb;
-    transition: 0.7s;
+    transition: 0.2s ease;
+    will-change: transform;
     border-left: 4px solid transparent;
 }
 
 section#resultado >ul > li:hover{
-    background-color: #fff1f2;
+    background-color: #fff7f8;
     border-left: 4px solid #be185d;
-    transform: scale(1.01);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
 }
 
 section#resultado >ul > li>div{
@@ -125,18 +133,24 @@ section#resultado >ul > li>div>h2{
 }
 
 input[type=checkbox]{
-  accent-color: #06290f;
+  accent-color:#be185d;
 }
 
 .tarefaConcluida{
     text-decoration:line-through ;
-    text-decoration-color: #eaffe6;
+    text-decoration-color: #86efac;
 }
 
 button.material-symbols-outlined{
     color: #be185d;
     border: none;
     background-color: transparent;
+    cursor: pointer;
+    transition: 0.2s;
 }
 
+button.material-symbols-outlined:hover {
+    transform: scale(1.1);
+    color: #9d174d;
+}
 
